@@ -34,12 +34,7 @@ class App extends Component {
         <Navbar />
         <QuoteForm />
         <QuoteList />
-        <QuoteCard
-          key={this.state.newQuote.quote}
-          quote={this.state.newQuote.quote}
-          image={this.state.newQuote.image}
-          character={this.state.newQuote.character}
-        />
+        <QuoteCard {...this.state.newQuote} />
         <button type="button" onClick={this.getQuote}>
           New Quote
         </button>
